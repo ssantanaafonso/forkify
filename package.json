@@ -1,0 +1,28 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "forkigy project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssantanaafonso/forkify.git"
+  },
+  "author": "Sergio Afonso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssantanaafonso/forkify/issues"
+  },
+  "homepage": "https://github.com/ssantanaafonso/forkify#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.1",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {}
+}
