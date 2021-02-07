@@ -7,7 +7,7 @@ const renderRecipe = recipe => {
     const markup = 
     `
         <li>
-            <a class="results__link" href="#23456">
+            <a class="results__link" href="#${recipe.recipe_id}">
                 <figure class="results__fig">
                     <img src="${recipe.image_url}" alt="${recipe.title}">
                 </figure>
@@ -48,8 +48,8 @@ export const clearInput = () => elements.searchInput.value = '';
     
 export const clearResults = () => elements.searchResultsList.innerHTML = '';
 
+
 const renderButtons = ( page, maxPage ) => {
-    clearButtons();
     if(maxPage === 0 || maxPage === 1){
         return 0;
     }
@@ -90,7 +90,7 @@ const renderButtonPrev = (page) => {
     elements.searchButtonDiv.insertAdjacentHTML('afterbegin', button);
 }
 
-const clearButtons = () =>{
+export const clearButtons = () =>{
     elements.searchButtonDiv.innerHTML = '';
 }
 
