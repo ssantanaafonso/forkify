@@ -20,9 +20,17 @@ const renderRecipe = recipe => {
     `;
     elements.searchResultsList.insertAdjacentHTML('beforeend', markup);
     
-}
+};
 
-const limitRecipeTitle = (title, limit = 17) => {
+export const highlightSelected = id => {
+    const resultsArr = Array.from(document.querySelectorAll('.results__link'));
+    resultsArr.forEach(el => el.classList.remove('results__link--active'));
+    document.querySelector(`.results__link[href="#${id}"]`).classList.add('results__link--active');
+};
+
+
+
+export const limitRecipeTitle = (title, limit = 17) => {
     if (title.length > limit){
         const newTitle = [];
         const arr = title.split(' ');
@@ -41,7 +49,7 @@ const limitRecipeTitle = (title, limit = 17) => {
     }
 
     return title;
-}
+};
 
 
 export const clearInput = () => elements.searchInput.value = '';

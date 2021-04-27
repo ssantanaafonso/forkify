@@ -2,7 +2,13 @@ export const elements = {
     searchInput: document.querySelector('.search__field'),
     searchResultsList: document.querySelector('.results__list'),
     searchResultsDiv: document.querySelector('.results'),
-    searchButtonDiv: document.querySelector('.results__pages')
+    searchButtonDiv: document.querySelector('.results__pages'),
+    recipe: document.querySelector('.recipe'),
+    shopping: document.querySelector('.shopping__list'),
+    likesMenu: document.querySelector('.likes__field'),
+    likesList: document.querySelector('.likes__list')
+
+
 };
 
 export const elementStrings = {
@@ -27,4 +33,4 @@ export const clearLoader = () => {
     const loader = document.querySelector(`.${elementStrings.loader}`);
     if( loader ) loader.parentElement.removeChild(loader);
 
-};
+}
